@@ -3,6 +3,7 @@
   height: 25px;
   width:500px;
   border: 1px solid black;
+  font-family: 'Lemon', cursive;
 }
 
 #pixelPainter{
@@ -14,10 +15,14 @@
   
 }
 h1{
-  background-color: white;
-  border: 2px solid black;
+  background-color: transparent;
+  border: 2px solid white;
   margin:0 auto;
   text-align: center;
+  color: transparent;
+  font-family: 'Lemon', cursive;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 1px;
 }
 .cells{
   height: 15px;
@@ -34,8 +39,9 @@ h1{
 
 }
 .clearButton{
+  border: 2px solid white;
   position: relative;
-  top: -95px;
+  top: 5px;
 display: inline-block;
 color: white;
 text-align: center;
@@ -45,36 +51,41 @@ width: 63px;
 
 }
 .eraseButton{
+  border: 2px solid white;
   position: relative;
-  top: -65px;
+  top: 5px;
 display: inline-block;
 color: black;
 text-align: center;
 background-color: yellow;
 height: 50px;
 width: 64px;
+left: 47px;
 
 }
 .randomColor{
+  border: 2px solid white;
   position: relative;
-  top: -49px;
+  top: 5px;
 display: inline-block;
 color: white;
 text-align: center;
 background-color: red;
 height: 50px;
-
+left: 102px;
 }
 #note{
   text-align: center;
   color: white;
+  font-family: 'Lemon', cursive;
 
 }
 
 body{
-  background: linear-gradient(132deg, #00FFFF, #FF00FF, #00FFFF);
+  background: linear-gradient(132deg, #780206
+  , #061161);
   background-size: 400% 400%;
-  animation: BackgroundGradient 10s ease infinite;
+  animation: BackgroundGradient 3s ease infinite;
 }
 #notes{
 width: 100%;
@@ -86,9 +97,10 @@ width: 100%;
   50%{background-position: 100% 50%;}
   100%{background-position: 0% 50%;}
 }body{
-  background: linear-gradient(132deg, #00FFFF, #FF00FF,  #00FFFF);
+  background: linear-gradient(132deg, #780206
+  , #061161);
   background-size: 400% 400%;
-  animation: BackgroundGradient 10s ease infinite;
+  animation: BackgroundGradient 3s ease infinite;
 }
 
 @keyframes BackgroundGradient {

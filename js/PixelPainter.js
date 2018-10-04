@@ -5,26 +5,19 @@ function PixelPainter(width, height) {
   screen.className = 'scream';
   pixelPaintDiv.appendChild(screen);
   let cells = document.getElementsByClassName('cells');
-  let rdCol = 'rgb(' + random(253) + ',' + random(253) + ',' + random(253) + ')';
   //object that holds the color and screen name of the swatch[i]
   let colorsArr = [
     { name: 'red', colur: '#FF0000' },
-    { name: 'green', colur: '#00FF00' },
+    { name: 'green', colur: '#228B22' },
     { name: 'blue', colur: '#0000FF' },
     { name: 'black', colur: '#000000' },
     { name: 'silver', colur: '#C0C0C0' },
-    { name: 'maroon', colur: '#800000' },
     { name: 'yellow', colur: '#FFFF00' },
-    { name: 'olive', colur: '#808000' },
     { name: 'lime', colur: '#00FF00' },
-    { name: 'aqua', colur: '#00FFFF' },
     { name: 'teal', colur: '#008080' },
-    { name: 'navy', colur: '#000080' },
-    { name: 'fuchsia', colur: '#FF00FF' },
     { name: 'purple', colur: '#800080' },
     { name: 'royalBlue', colur: '#4169E1' },
     { name: 'turquoise', colur: '#40E0D0' },
-    { name: 'gold', colur: '#FFD700' },
     { name: 'chocolate', colur: '#D2691E' },
     { name: 'smokeWhite', colur: '#DFDFDF' }
   ]
@@ -41,11 +34,22 @@ function PixelPainter(width, height) {
 
         c.addEventListener('mousedown', function (event) {
           event.target.style.backgroundColor = currentColor;
-          if (isMouseDown === true) {
+          if (mousedown === true) {
             return currentColor;
           } else {
             throw err;
           }
+        })
+
+        c.addEventListener('mouseover', function (event){
+          if(mousedown === true) {
+          event.target.style.backgroundColor = currentColor;
+          console.log(mousedown);
+          }
+        })
+
+        c.addEventListener('mouseup', function (){
+          mousedown = false;
         })
       }
 
@@ -101,18 +105,25 @@ function PixelPainter(width, height) {
   eraseButton.addEventListener('click', eraseFunc);
 
   function clearFunc() {
-    c = document.getElementsByClassName('cells')
-    for (let i = 0; i < c.length; i++) {
+    const cellz = document.getElementsByClassName('cells')
+    for(i = 0; i < cellz.length; i++){
       screen.innerHTML = 'All Clear';
-      c[i].style.backgroundColor = 'white';
+      cellz[i].style.backgroundColor = 'white';
+    }
+    if (screen.innerHTML === 'All Clear'){
+      return screen.style.backgroundColor = 'white';
     }
   }
   function eraseFunc() {
     screen.innerHTML = 'erase';
     currentColor = 'white';
+    if(screen.innerHTML = 'erase'){
+      return screen.style.backgroundColor = 'white';
+    }
   }
   function random(number) {
     return Math.floor(Math.random() * (number + 2));
+    screen.innerHTML = "Random Color";
   }
 
 }
