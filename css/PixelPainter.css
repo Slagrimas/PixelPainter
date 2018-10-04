@@ -1,0 +1,111 @@
+.scream{
+  background-color: white;
+  height: 25px;
+  width:500px;
+  border: 1px solid black;
+  font-family: 'Lemon', cursive;
+}
+
+#pixelPainter{
+  height: 50px;
+  width:375px;
+  display:flex;
+  flex-wrap:wrap;
+  margin:0 auto;
+  
+}
+h1{
+  background-color: transparent;
+  border: 2px solid white;
+  margin:0 auto;
+  text-align: center;
+  color: transparent;
+  font-family: 'Lemon', cursive;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 1px;
+}
+.cells{
+  height: 15px;
+  width: 15px;
+  border:1px black solid;
+  background-color: white;
+}
+
+.colorcell{
+  margin: 0 auto;
+  height: 15px;
+  width: 67px;
+  border:1px black solid;
+
+}
+.clearButton{
+  border: 2px solid white;
+  position: relative;
+  top: 5px;
+display: inline-block;
+color: white;
+text-align: center;
+background-color: blue;
+height: 50px;
+width: 93px;
+
+}
+.eraseButton{
+  border: 2px solid white;
+  position: relative;
+  top: 5px;
+display: inline-block;
+color: black;
+text-align: center;
+background-color: yellow;
+height: 50px;
+width: 93px;
+left: 50px;
+
+}
+.randomColor{
+  border: 2px solid white;
+  position: relative;
+  top: 5px;
+display: inline-block;
+color: white;
+text-align: center;
+width: 93px;
+background-color: red;
+height: 50px;
+left: 95px;
+}
+#note{
+  text-align: center;
+  color: white;
+  font-family: 'Lemon', cursive;
+
+}
+
+body{
+  background: linear-gradient(132deg, #780206
+  , #061161);
+  background-size: 400% 400%;
+  animation: BackgroundGradient 3s ease infinite;
+}
+#notes{
+width: 100%;
+
+}
+
+@keyframes BackgroundGradient {
+  0%{background-position: 0% 50%;}
+  50%{background-position: 100% 50%;}
+  100%{background-position: 0% 50%;}
+}body{
+  background: linear-gradient(132deg, #780206
+  , #061161);
+  background-size: 400% 400%;
+  animation: BackgroundGradient 3s ease infinite;
+}
+
+@keyframes BackgroundGradient {
+  0%{background-position: 0% 50%;}
+  50%{background-position: 100% 50%;}
+  100%{background-position: 0% 50%;}
+}
