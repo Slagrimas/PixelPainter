@@ -1,7 +1,7 @@
 .scream{
   background-color: white;
   height: 25px;
-  width:500px;
+  width:400px;
   border: 1px solid black;
   font-family: 'Lemon', cursive;
 }
@@ -34,7 +34,7 @@ h1{
 .colorcell{
   margin: 0 auto;
   height: 15px;
-  width: 100px;
+  width: 60px;
   border:1px black solid;
 
 }

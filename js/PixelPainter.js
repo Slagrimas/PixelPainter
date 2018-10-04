@@ -3,6 +3,7 @@ function PixelPainter(width, height) {
   let screen = document.createElement('div');
   let currentColor = '#FFFFFF';
   screen.className = 'scream';
+  let isMouseDown = false;
   pixelPaintDiv.appendChild(screen);
   let cells = document.getElementsByClassName('cells');
   //object that holds the color and screen name of the swatch[i]
@@ -19,6 +20,11 @@ function PixelPainter(width, height) {
     { name: 'royalBlue', colur: '#4169E1' },
     { name: 'turquoise', colur: '#40E0D0' },
     { name: 'chocolate', colur: '#D2691E' },
+    { name: 'pink', colur: '#FFC0CB' },
+    { name: 'aqua', colur: '#00FFFF' },
+    { name: 'navy', colur: '#000080' },
+    { name: 'Purple2', colur: '#893BFF' },
+    { name: 'dark slate grey', colur: '#25383C' },
     { name: 'smokeWhite', colur: '#DFDFDF' }
   ]
   //create main canvas
@@ -42,14 +48,15 @@ function PixelPainter(width, height) {
         })
 
         c.addEventListener('mouseover', function (event){
-          if(mousedown === true) {
-          event.target.style.backgroundColor = currentColor;
-          console.log(mousedown);
+          if(isMouseDown === true) {
+          
+          return  event.target.style.backgroundColor = currentColor;
+          console.log(mouseDown);
           }
         })
 
         c.addEventListener('mouseup', function (){
-          mousedown = false;
+          isMouseDown = false;
         })
       }
 
@@ -128,4 +135,4 @@ function PixelPainter(width, height) {
 
 }
 
-PixelPainter(13, 13);
+PixelPainter(18, 18);
