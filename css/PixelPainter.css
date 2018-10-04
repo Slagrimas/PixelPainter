@@ -1,7 +1,7 @@
 .scream{
   background-color: white;
   height: 25px;
-  width:400px;
+  width:500px;
   border: 1px solid black;
   font-family: 'Lemon', cursive;
 }
@@ -34,7 +34,7 @@ h1{
 .colorcell{
   margin: 0 auto;
   height: 15px;
-  width: 60px;
+  width: 67px;
   border:1px black solid;
 
 }
@@ -47,7 +47,7 @@ color: white;
 text-align: center;
 background-color: blue;
 height: 50px;
-width: 63px;
+width: 93px;
 
 }
 .eraseButton{
@@ -59,8 +59,8 @@ color: black;
 text-align: center;
 background-color: yellow;
 height: 50px;
-width: 64px;
-left: 47px;
+width: 93px;
+left: 50px;
 
 }
 .randomColor{
@@ -70,9 +70,10 @@ left: 47px;
 display: inline-block;
 color: white;
 text-align: center;
+width: 93px;
 background-color: red;
 height: 50px;
-left: 102px;
+left: 95px;
 }
 #note{
   text-align: center;

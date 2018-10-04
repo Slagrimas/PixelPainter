@@ -34,28 +34,35 @@ function PixelPainter(width, height) {
       row.id = 'row';
 
       for (let j = 0; j < width; j++) {
-        c = document.createElement("div");
-        row.appendChild(c);
-        c.className = "cells";
+        ceel = document.createElement("div");
+        row.appendChild(ceel);
+        ceel.className = "cells";
 
-        c.addEventListener('mousedown', function (event) {
+        ceel.addEventListener('mousedown', function (event) {
+          // event.target.style.backgroundColor = currentColor;
+          // console.log(isMouseDown);
+          isMouseDown = true;
           event.target.style.backgroundColor = currentColor;
-          if (mousedown === true) {
-            return currentColor;
-          } else {
-            throw err;
-          }
-        })
-
-        c.addEventListener('mouseover', function (event){
-          if(isMouseDown === true) {
+            // return currentColor;
           
-          return  event.target.style.backgroundColor = currentColor;
-          console.log(mouseDown);
+          })
+
+
+        // ceel.addEventListener('mousemove', function (event){
+        //   console.log(event);
+        //   if(isMouseDown === true) {
+        //   return event.target.style.backgroundColor = currentColor;
+          
+        //   }
+        // })
+
+        ceel.addEventListener('mouseover', function (event){
+          if(isMouseDown === true){
+            event.target.style.backgroundColor = currentColor;
           }
         })
 
-        c.addEventListener('mouseup', function (){
+        ceel.addEventListener('mouseup', function (){
           isMouseDown = false;
         })
       }
@@ -66,7 +73,7 @@ function PixelPainter(width, height) {
 
   createCanvas(width, height);
 
-  //create color pallet
+//  create color pallet
   let colorDiv = document.createElement('div');
   colorDiv.className = 'color-container';
   pixelPaintDiv.appendChild(colorDiv);
@@ -74,6 +81,7 @@ function PixelPainter(width, height) {
     for (let i = 0; i < colorsArr.length; i++) {
       let colorCell = document.createElement('div');
       colorCell.style.backgroundColor = colorsArr[i].colur;
+      // colorCell.style.innerHTML = colorsArr[i].name;
       colorCell.className = 'colorcell';
       colorDiv.appendChild(colorCell);
       colorCell.addEventListener('click', function () {
@@ -82,7 +90,7 @@ function PixelPainter(width, height) {
         currentColor = colorsArr[i].colur;
       })
     }
-  }
+  } 
   createPallet(colorsArr);
 
   let buttonContainer = document.createElement('div');
@@ -108,9 +116,8 @@ function PixelPainter(width, height) {
   randomColorButton.addEventListener('click', function () {
     currentColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')'
   });
+  
   clearButton.addEventListener('click', clearFunc);
-  eraseButton.addEventListener('click', eraseFunc);
-
   function clearFunc() {
     const cellz = document.getElementsByClassName('cells')
     for(i = 0; i < cellz.length; i++){
@@ -121,6 +128,7 @@ function PixelPainter(width, height) {
       return screen.style.backgroundColor = 'white';
     }
   }
+  eraseButton.addEventListener('click', eraseFunc);
   function eraseFunc() {
     screen.innerHTML = 'erase';
     currentColor = 'white';
